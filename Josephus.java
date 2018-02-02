@@ -8,15 +8,15 @@ public class Josephus
     int n = scan.nextInt();
     System.out.print("The count for each step? :");
     int k = scan.nextInt();
-    int winner = sol(n,k);
-    System.out.println("The winner is position "+winner+".");
-  }
-  public static int sol (int n, int k)
+    int winner = g(n,k);
+    System.out.println("The winner is position "+(winner+1)+".");
+    }
+  public static int g (int n, int k)
   {
     if(n==1)
     {
       return 0;
     }
-    return ((sol(n-1,k)+k)%n)+1;
+    return ((g(n-1,k)+k)%n);
   }
 }
