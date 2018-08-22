@@ -1,0 +1,50 @@
+Case #1: Not valid
+Case #2: Not valid
+Case #3: Sunday
+Case #4: Saturday
+Case #5: Wednesday
+Case #6: Saturday
+Case #7: Wednesday
+Case #8: Not valid
+Case #9: Monday
+Case #10: Thursday
+Case #11: Not valid
+Case #12: Friday
+Case #13: Not valid
+Case #14: Saturday
+Case #15: Tuesday
+Case #16: Not valid
+Case #17: Sunday
+Case #18: Not valid
+Case #19: Sunday
+Case #20: Friday
+Case #21: Sunday
+Case #22: Not valid
+Case #23: Friday
+Case #24: Tuesday
+Case #25: Wednesday
+Case #26: Friday
+Case #27: Not valid
+Case #28: Sunday
+Case #29: Monday
+Case #30: Sunday
+Case #31: Saturday
+Case #32: Monday
+Case #33: Tuesday
+Case #34: Not valid
+Case #35: Tuesday
+Case #36: Monday
+Case #37: Not valid
+Case #38: Saturday
+Case #39: Monday
+Case #40: Monday
+Case #41: Not valid
+Case #42: Not valid
+Case #43: Sunday
+Case #44: Wednesday
+Case #45: Monday
+Case #46: Thursday
+Case #47: Not valid
+Case #48: Friday
+Case #49: Saturday
+Case #50: Sunday
