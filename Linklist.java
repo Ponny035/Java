@@ -1,6 +1,7 @@
 public class Linklist<T>  {
   Node<T> head;
   Node<T> pointer;
+  int size=0;
   public Linklist() {
     head = new Node<T>();
     pointer = head;
@@ -20,6 +21,7 @@ public class Linklist<T>  {
       Node node = new Node<T>(value);
       pointer.setNext(node);
     }
+    size++;
     pointer = head;
   }
   public void add (int n, T value) {
@@ -34,13 +36,21 @@ public class Linklist<T>  {
       Node node = new Node<T>(value, pointer.next());
       pointer.setNext(node);
     }
+    size++;
     pointer = head;
+  }
+  public void addFirst(T value) {
+    add(0, value);
+  }
+  public void addLast(T value) {
+    add(value);
   }
   public void remove () {
     while((pointer.next()).next() != null) {
       pointer = pointer.next();
     }
     pointer.setNext(null);
+    size--;
     pointer = head;
   }
   public void remove (int n) {
@@ -54,6 +64,7 @@ public class Linklist<T>  {
       pointer = pointer.next();
     }
     pointer.setNext(temp);
+    size--;
     pointer = head;
   }
 
@@ -73,5 +84,8 @@ public class Linklist<T>  {
     temp = pointer;
     pointer = head;
     return temp.get();
+  }
+  public int size() {
+    return size;
   }
 }

@@ -1,11 +1,11 @@
 import java.util.Scanner;
-public class RightPascal 
-{  
-  public static void main (String[] args) 
-  { 
+public class RightPascal
+{
+  public static void main (String[] args)
+  {
     Scanner scan = new Scanner(System.in);
     int row = scan.nextInt();
-    
+
     long[][] ans = new long[row][row];
     ans[0][0]=1;
     ans[1][0]=1;
@@ -15,7 +15,7 @@ public class RightPascal
       ans[j][0]=1;
       ans[j][j]=1;
     }
-    
+
     for(int j=2; j<row; j++)
     {
       for(int a=1; a<j ; a++)
