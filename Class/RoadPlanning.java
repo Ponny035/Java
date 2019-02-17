@@ -17,7 +17,7 @@ public class RoadPlanning {
       System.out.println("The location that minimize is valley "+ (int)(postOffice[0]) +" Maximun distance is "+ postOffice[1]+" Km.");
     }
     catch (NullPointerException e) {
-
+      System.out.println("There is somthing error in program please run it again.");
     }
   }
 
@@ -25,7 +25,7 @@ public class RoadPlanning {
       System.out.print("How many house do valley in high way:  ");
       int n = scan.nextInt();
       if(n <= 0) {
-        throw new NegativeArraySizeException ("Test");
+        throw new NegativeArraySizeException ("Negative Array Size");
       }
       valley = new double[n];
     for (int i=0; i<valley.length-1; i++) {
@@ -38,6 +38,7 @@ public class RoadPlanning {
     if(valley.length != 1) {
       int min =0;
       int max =valley.length-1;
+      int oldValue = 0;
       while(max-min > 1) {
         int mid = (min+max)/2;
         double firstHalf = 0;
@@ -52,6 +53,7 @@ public class RoadPlanning {
         if(firstHalf > secondHalf) {
           max = mid;
           value[1] = firstHalf;
+          //old
         }
         else {
           min = mid;
