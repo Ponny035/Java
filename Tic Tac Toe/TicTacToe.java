@@ -5,7 +5,21 @@ public class TicTacToe {
   private static Scanner scan;
   private static String[][] table = {{"1","2","3"},{"4","5","6"},{"7","8","9"}};
 
-  public static void main(String[] args) {
+  // public static void main(String[] args) {
+  //   scan = new Scanner(System.in);
+  //   printTable();
+  //   int[] testRun = {2,4,1,3,6,5,9,8,7};
+  //   turn("x",testRun, 0);
+  // }
+
+  // auto
+  public TicTacToe (int[] turns) {
+    scan = new Scanner(System.in);
+    printTable();
+    turn("x",turns, 0);
+  }
+  // 2 players
+  public TicTacToe () {
     scan = new Scanner(System.in);
     printTable();
     turn("x");
@@ -13,7 +27,7 @@ public class TicTacToe {
 
   private static boolean turn(String player) {
     count++;
-    if(count == 10) {
+    if(count == (table.length*table[0].length)+1) {
       System.out.println("== Draw ==");
       return true;
     }
@@ -39,6 +53,34 @@ public class TicTacToe {
       }
       else {
         turn("x");
+      }
+    }
+    return false;
+  }
+
+  private static boolean turn(String player, int[] turns, int countTurn) {
+    countTurn++;
+    if(countTurn > (table.length*table[0].length)) {
+      System.out.println("== Draw ==");
+      return true;
+    }
+    System.out.println("This is "+player+ " turn.");
+    boolean check = false;
+    while(!check) {
+      int number  = turns[countTurn-1];
+      check= add(number-1,player);
+    }
+    printTable();
+    if(isWin(player)) {
+      System.out.println("Congrat!!!! "+player+" win.");
+      return true;
+    }
+    else {
+      if(player.equals("x")){
+        turn("o",turns,countTurn);
+      }
+      else {
+        turn("x",turns,countTurn);
       }
     }
     return false;
