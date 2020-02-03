@@ -8,8 +8,7 @@ public class TicTacToe {
   // public static void main(String[] args) {
   //   scan = new Scanner(System.in);
   //   printTable();
-  //   int[] testRun = {2,4,1,3,6,5,9,8,7};
-  //   turn("x",testRun, 0);
+  //   turn("x");
   // }
 
   // auto

@@ -8,10 +8,7 @@ public class Play {
       int[] a = new int[9];
       int count=0;
       while(count<a.length) {
-        int b = (int)(Math.random()*10);
-        if(b==0) {
-          b++;
-        }
+        int b = (int)(Math.random()*8)+1;
         if(check(a,b)) {
           a[count]=b;
           count++;
