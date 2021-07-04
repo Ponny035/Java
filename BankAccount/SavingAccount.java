@@ -1,6 +1,6 @@
 public class SavingAccount extends Account
 {
-  int profit =0;
+  double profit =0;
   public SavingAccount(String accountName, int accountNumber, String branch, double balance)
   {
     super( accountName, accountNumber, branch, balance);
